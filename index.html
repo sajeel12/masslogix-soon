@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mass Logix Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: radial-gradient(circle at center, #101010, #000000);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero {
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .logo-img {
+      width: 220px;
+      animation: pop 1.5s infinite ease-in-out;
+    }
+    @keyframes pop {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.85; }
+    }
+    .main-text {
+      font-size: 2.5rem;
+      margin-top: 25px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+    }
+    .coming-soon {
+      font-size: 1.5rem;
+      margin-top: 12px;
+      color: #dbff00;
+      animation: glow 2s ease-in-out infinite;
+      letter-spacing: 2px;
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 5px #dbff00, 0 0 10px #dbff00; }
+      50% { text-shadow: 0 0 15px #dbff00, 0 0 30px #dbff00; }
+    }
+    .loader {
+      margin-top: 35px;
+      width: 300px;
+      height: 14px;
+      border: 2px solid white;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      background-color: #111;
+      box-shadow: 0 0 10px #fff3;
+    }
+    .loader-bar {
+      height: 100%;
+      width: 85%;
+      background-color: #dbff00;
+      animation: fillBar 2s ease-in-out infinite;
+      border-radius: 10px 0 0 10px;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 85%; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="images/Logo.png" alt="Mass Logix Logo" class="logo-img">
+    <p class="main-text">Mass Logix</p>
+    <p class="coming-soon">Coming Soon</p>
+    <div class="loader">
+      <div class="loader-bar"></div>
+    </div>
+  </section>
+</body>
+</html>
